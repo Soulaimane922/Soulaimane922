@@ -4,100 +4,136 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>CV - Soulaïmane Abaid</title>
+  <title>CV - FolioOne</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-  <link href="./assets/img/favicon.png" rel="icon">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="./vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="./vendor/aos/aos.css" rel="stylesheet">
-  <link href="./css/main.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
 </head>
 
-<body class="index-page">
+<body class="resume-page">
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">FolioOne</h1>
+      </a>
+
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">À propos</a></li>
           <li><a href="resume.html" class="active">CV</a></li>
-          <li><a href="services.html">Compétences</a></li>
+          <li><a href="index.html">Compétences</a></li>
           <li><a href="portfolio.html">Projets</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
     </div>
   </header>
+  <!-- End Header -->
 
   <main class="main">
-    <section id="resume" class="resume section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Mon CV</h2>
-          <p>Retrouvez mon parcours académique et mes expériences professionnelles en informatique.</p>
-          <div class="mb-4">
-            <a href="docs/CV_Soulaimane_Abaid.pdf" class="btn btn-primary" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Télécharger mon CV (PDF)</a>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Formation</h3>
-            <div class="resume-item">
-              <h4>BTS SIO option SISR</h4>
-              <h5>2025 - Présent</h5>
-              <p><em>Lycée Léonard de Vinci, Melun[cite: 9, 10]</em></p>
-              <p>Services Informatiques aux Organisations, Solutions d'Infrastructure, Systèmes et Réseaux.</p>
-            </div>
-            <div class="resume-item">
-              <h4>Bac Pro Système Numérique option RISC</h4>
-              <h5>2024 - 2025</h5>
-              <p><em>Lycée La Tournelle, La Garenne-Colombes[cite: 10]</em></p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <h3 class="resume-title">Expériences Professionnelles</h3>
-            <div class="resume-item">
-              <h4>Stage - SosTech Paris</h4>
-              <h5>2026 (6 semaines)[cite: 10]</h5>
-              <p><em>Première année BTS Ciel[cite: 10]</em></p>
-              <ul>
-                <li>Gestion du parc informatique avec GLPI Agent[cite: 10].</li>
-                <li>Réparation de matériel informatique et du BIOS sur différents PC[cite: 10].</li>
-                <li>Création d'un script d'installation d'applications en arrière-plan (Linux et Windows)[cite: 10].</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Stage - Linux-Man (La Garenne-Colombes)</h4>
-              <h5>2025 (6 semaines)[cite: 10]</h5>
-              <p><em>Terminal Bac Pro[cite: 10]</em></p>
-              <ul>
-                <li>Installation de Linux dans une machine virtuelle avec clé SSH[cite: 10].</li>
-                <li>Développement de l'environnement Vagrant avec VM et sécurisation des interfaces (en collaboration avec BNP Paribas)[cite: 10].</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Stages - Mersen France (Gennevilliers)</h4>
-              <h5>2023 - 2024 (2 et 4 semaines)[cite: 10]</h5>
-              <ul>
-                <li>Câblage et installation de réseaux RJ45, utilisation de switchs et routeurs[cite: 10].</li>
-                <li>Schématisation d'architectures réseaux sous Cisco Packet Tracer et Microsoft Visio[cite: 10].</li>
-              </ul>
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Mon Curriculum Vitæ</h1>
+              <p class="mb-0">Retrouvez mon parcours académique, mes expériences professionnelles et les compétences clés de mon CV.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div><!-- End Page Title -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Résumé Sommaire</h3>
+            <div class="resume-item pb-0">
+              <h4>Développeur Junior / Stagiaire</h4>
+              <p><em>Rigoureux et motivé, je cherche à appliquer mes compétences techniques en développement web à travers des projets stimulants en entreprise.</em></p>
+              <ul>
+                <li>France</li>
+                <li>votre.email@exemple.com</li>
+                <li>+33 6 XX XX XX XX</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Formation & Diplômes</h3>
+            <div class="resume-item">
+              <h4>Études en Informatique & Développement</h4>
+              <p><em>2024 - Présent</em></p>
+              <p>Apprentissage des langages de programmation, conception de bases de données et intégration web.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Expérience Professionnelle & Stage</h3>
+            <div class="resume-item">
+              <h4>Stage en Développement Web / Informatique</h4>
+              <p><em>Période de stage en cours / récente</em></p>
+              <p><em>Nom de l'Entreprise</em></p>
+              <ul>
+                <li>Participation au développement de fonctionnalités logicielles ou web.</li>
+                <li>Correction de bugs et amélioration de l'expérience utilisateur.</li>
+                <li>Utilisation des outils de versioning (Git / GitHub) et de méthodes agiles.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /Resume Section -->
+
   </main>
 
-  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/main.js"></script>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">FolioOne</strong> <span>Tous droits réservés</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>
