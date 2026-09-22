@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulaïmane Abaid | Portfolio BTS SIO SISR</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-sky-500 selection:text-white min-h-screen flex flex-col">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-2 text-lg font-bold tracking-tight text-white hover:text-sky-400 transition">
+                <span class="p-2 bg-sky-500/10 text-sky-400 rounded-lg border border-sky-500/20">
+                    <i data-lucide="terminal" class="w-5 h-5"></i>
+                </span>
+                <span>Soulaïmane<span class="text-sky-400">.A</span></span>
+            </a>
+
+            <!-- Navigation Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-sky-400 transition">À propos</a>
+                <a href="#competences" class="hover:text-sky-400 transition">Compétences</a>
+                <a href="#experiences" class="hover:text-sky-400 transition">Expériences</a>
+                <a href="#formations" class="hover:text-sky-400 transition">Formations</a>
+                <a href="#documents" class="hover:text-sky-400 transition">Documents</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-sky-600 hover:bg-sky-500 rounded-lg transition shadow-lg shadow-sky-600/20">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span>Contact</span>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-4 py-4 space-y-3 text-sm">
+            <a href="#about" class="block text-slate-300 hover:text-sky-400 py-1">À propos</a>
+            <a href="#competences" class="block text-slate-300 hover:text-sky-400 py-1">Compétences</a>
+            <a href="#experiences" class="block text-slate-300 hover:text-sky-400 py-1">Expériences</a>
+            <a href="#formations" class="block text-slate-300 hover:text-sky-400 py-1">Formations</a>
+            <a href="#documents" class="block text-slate-300 hover:text-sky-400 py-1">Documents (CV & LM)</a>
+            <a href="#contact" class="block text-sky-400 font-semibold py-1">Contactez-moi</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden flex-1">
+        <!-- Glow Effect -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                    Étudiant BTS SIO - Option SISR (1ère Année)
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Administrateur <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">Systèmes & Réseaux</span>
+                </h1>
+                
+                <p class="text-lg text-slate-400 leading-relaxed mb-8">
+                    Passionné par l'infrastructure informatique, la virtualisation, la cybersécurité et le réseau. Actuellement en formation au <strong>Lycée Léonard de Vinci (Melun)</strong>, je mets en pratique mes compétences à travers des projets concrets.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#documents" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-medium text-sm transition shadow-lg shadow-sky-600/25">
+                        <i data-lucide="file-text" class="w-4 h-4"></i>
+                        <span>Consulter CV & Lettre</span>
+                    </a>
+                    <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium text-sm transition">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span>Me Contacter</span>
+                    </a>
+                </div>
+
+                <!-- Fast Info Bar -->
+                <div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-sky-400"></i>
+                        <span>Gennevilliers / Melun, France</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4 text-sky-400"></i>
+                        <span>soulaimaneabaid655@gmail.com</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-sky-400"></i>
+                        <span>07 81 88 29 46</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="competences" class="py-20 bg-slate-900/50 relative border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white tracking-tight mb-3">Compétences Techniques</h2>
+                <p class="text-slate-400 text-sm">Technologies et outils maîtrisés durant mon parcours académique et mes stages professionnels.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Systèmes & Virtualisation -->
+                <div class="glass-card p-6 rounded-2xl transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-5 border border-sky-500/20">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Systèmes & Virtualisation</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
+                            <span>OS : Windows Server, Linux (Ubuntu)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
+                            <span>Virtualisation : VirtualBox, Proxmox</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
+                            <span>Conteneurisation : Docker</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i>
+                            <span>Environnements VM : Vagrant</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Réseaux & Equipements -->
+                <div class="glass-card p-6 rounded-2xl transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-5 border border-indigo-500/20">
+                        <i data-lucide="network" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Réseaux & Infrastructures</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i>
+                            <span>Switches & Routeurs CISCO</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i>
+                            <span>VLANs, Routage Inter-VLAN, Trunking</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i>
+                            <span>Services fondamentaux : DHCP, DNS, TFTP</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i>
+                            <span>Câblage RJ45 & Schématisation (MS Visio)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Administration & Sécurité -->
+                <div class="glass-card p-6 rounded-2xl transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-5 border border-emerald-500/20">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Gestion & Sécurité</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Active Directory & Droits NTFS</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Gestion de parc : GLPI & GLPI Agent</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Supervision : Zabbix</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Prise de main à distance : SSH, RDP</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Développement & Scripting -->
+                <div class="glass-card p-6 rounded-2xl transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 border border-amber-500/20">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Développement & Web</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+                            <span>HTML5 / CSS3 / Bootstrap</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+                            <span>Bases de données : SQL, MySQL</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+                            <span>Scripting & Automatisation (Linux / Win)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i>
+                            <span>Bases en PHP</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- IoT & Matériel -->
+                <div class="glass-card p-6 rounded-2xl transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-5 border border-purple-500/20">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Systèmes Embarqués & Hardware</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400"></i>
+                            <span>Raspberry Pi, Arduino & ESP32</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400"></i>
+                            <span>Maintenance matérielle / Réparation BIOS</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400"></i>
+                            <span>Diagnostic & Assemblage de PC</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Méthodologies & Outils -->
+                <div class="glass-card p-6 rounded-2xl transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-5 border border-rose-500/20">
+                        <i data-lucide="wrench" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Outils & Bonnes Pratiques</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-400"></i>
+                            <span>Gestion des services avec ITIL</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-400"></i>
+                            <span>Simulation réseau Cisco Packet Tracer</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-rose-400"></i>
+                            <span>Suite Bureautique (Office 365)</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Expériences Professionnelles Section -->
+    <section id="experiences" class="py-20 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white tracking-tight mb-3">Expériences Professionnelles</h2>
+                <p class="text-slate-400 text-sm">Mon parcours pratique réalisé au cours de mes stages en entreprise.</p>
+            </div>
+
+            <div class="relative border-l border-slate-800 ml-4 md:ml-32 space-y-12">
+
+                <!-- Stage 1: SosTech -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-1.5 w-6 h-6 rounded-full bg-slate-900 border-2 border-sky-500 flex items-center justify-center">
+                        <div class="w-2 h-2 rounded-full bg-sky-400"></div>
+                    </div>
+                    
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-semibold text-sky-400 mb-2 md:mb-0 md:text-right w-28">
+                        2026 (6 sem)
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Stage Technicien Systèmes & Réseaux</h3>
+                                <p class="text-sky-400 font-medium text-sm">SosTech — Paris</p>
+                            </div>
+                            <span class="px-2.5 py-1 text-xs rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20">BTS SIO</span>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                            <span>Gestion du parc informatique via l'agent GLPI.</span><br>
+                            <span>Réparation matérielle d'ordinateurs et reprogrammation/flashage de BIOS.</span><br>
+                            <span>Création d'un programme d'installation automatisée et silencieuse d'applications en arrière-plan sur OS Linux et Windows.</span>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">GLPI</span>
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Scripting OS</span>
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Maintenance Hardware</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2: Linux-Man -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-1.5 w-6 h-6 rounded-full bg-slate-900 border-2 border-indigo-500 flex items-center justify-center">
+                        <div class="w-2 h-2 rounded-full bg-indigo-400"></div>
+                    </div>
+                    
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-semibold text-indigo-400 mb-2 md:mb-0 md:text-right w-28">
+                        2025 (6 sem)
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Stage Infrastructure & Virtualisation</h3>
+                                <p class="text-indigo-400 font-medium text-sm">Linux-Man — La Garenne-Colombes</p>
+                            </div>
+                            <span class="px-2.5 py-1 text-xs rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Terminal Bac Pro</span>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                            <span>Installation et configuration avancée d'OS Linux en Machine Virtuelle avec sécurisation par clés SSH.</span><br>
+                            <span>Développement de l'environnement Vagrant pour l'automatisation de VM.</span><br>
+                            <span>Sécurisation des interfaces réseau d'entreprises (Projet en collaboration avec BNP Paribas).</span>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Linux</span>
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Vagrant</span>
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">SSH Key</span>
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">BNP Paribas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 3: Mersen France 2024 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-1.5 w-6 h-6 rounded-full bg-slate-900 border-2 border-emerald-500 flex items-center justify-center">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+                    </div>
+                    
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-semibold text-emerald-400 mb-2 md:mb-0 md:text-right w-28">
+                        2024 (4 sem)
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Stage Réseau & Câblage</h3>
+                                <p class="text-emerald-400 font-medium text-sm">Mersen France — Gennevilliers</p>
+                            </div>
+                            <span class="px-2.5 py-1 text-xs rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">1ère Bac Pro</span>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                            <span>Pose de câblage et raccordement de prises réseau RJ45.</span><br>
+                            <span>Conception et tests de topologies réseau sous Cisco Packet Tracer.</span><br>
+                            <span>Configuration et intégration de switchs et routeurs physiques en atelier.</span>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Cisco Packet Tracer</span>
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Câblage RJ45</span>
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Switch & Routeur</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 4: Mersen France 2023 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-1.5 w-6 h-6 rounded-full bg-slate-900 border-2 border-slate-600 flex items-center justify-center">
+                        <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+                    </div>
+                    
+                    <div class="md:absolute md:-left-36 md:top-1 text-xs font-semibold text-slate-400 mb-2 md:mb-0 md:text-right w-28">
+                        2023 (2 sem)
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Stage Découverte Architecture Réseau</h3>
+                                <p class="text-slate-400 font-medium text-sm">Mersen France — Gennevilliers</p>
+                            </div>
+                            <span class="px-2.5 py-1 text-xs rounded-full bg-slate-800 text-slate-400 border border-slate-700">2nde Bac Pro</span>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                            <span>Schématisation de l'architecture réseau de l'entreprise avec Microsoft Visio.</span><br>
+                            <span>Identification, repérage et audit des connexions RJ45 dans le bâtiment.</span>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">MS Visio</span>
+                            <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Audit Réseau</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations Section -->
+    <section id="formations" class="py-20 bg-slate-900/50 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white tracking-tight mb-3">Formations & Diplômes</h2>
+                <p class="text-slate-400 text-sm">Mon parcours d'études théorique et pratique.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- BTS SIO -->
+                <div class="glass-card p-8 rounded-2xl border-l-4 border-l-sky-500">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-sky-400">En cours (2025 - Présent)</span>
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-sky-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">BTS SIO (Option SISR)</h3>
+                    <p class="text-slate-400 text-sm mb-4">Lycée Léonard De Vinci — Melun</p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Option <strong>Solutions d'Infrastructure, Systèmes et Réseaux</strong>. Formation spécialisée dans la conception, l'installation, la sécurisation et la maintenance des infrastructures réseaux informatiques.
+                    </p>
+                </div>
+
+                <!-- Bac Pro SN -->
+                <div class="glass-card p-8 rounded-2xl border-l-4 border-l-indigo-500">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Obtenu (2024 - 2025)</span>
+                        <i data-lucide="award" class="w-6 h-6 text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">Bac Pro Système Numérique (Option RISC)</h3>
+                    <p class="text-slate-400 text-sm mb-4">Lycée La Tournelle — La Garenne-Colombes</p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Option <strong>Réseaux Informatiques et Systèmes Communicants</strong>. Maîtrise des fondamentaux du câblage, de l'interconnexion réseau, de l'installation système et de l'électronique de base.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section (CV & Lettre) -->
+    <section id="documents" class="py-20 border-t border-slate-800 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white tracking-tight mb-3">Espace Documents</h2>
+                <p class="text-slate-400 text-sm">Visualisez et téléchargez directement mon CV et ma lettre de motivation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Document Card: CV -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center border border-sky-500/20">
+                                <i data-lucide="file-text" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Format PDF</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Curriculum Vitae</h3>
+                        <p class="text-slate-400 text-sm mb-6">
+                            Résumé complet de mes compétences en administration système, réseaux, expériences professionnelles et formation.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-slate-800">
+                        <button onclick="openCvModal()" class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-medium text-sm transition">
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                            <span>Aperçu</span>
+                        </button>
+                        <button onclick="downloadCv()" class="inline-flex items-center justify-center p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition" title="Télécharger">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Document Card: Lettre de Motivation -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                                <i data-lucide="mail-open" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Format PDF</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Lettre de Motivation</h3>
+                        <p class="text-slate-400 text-sm mb-6">
+                            Candidature détaillée exposant ma motivation, mon autonomie et ma volonté de m'intégrer à une équipe informatique.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-slate-800">
+                        <button onclick="openLmModal()" class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition">
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                            <span>Aperçu</span>
+                        </button>
+                        <button onclick="downloadLm()" class="inline-flex items-center justify-center p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition" title="Télécharger">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900/50 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white tracking-tight mb-4">Me Contacter</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto mb-10">
+                Vous avez un projet, une proposition de stage ou des questions sur mon profil ? N'hésitez pas à me contacter directement.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+                <a href="mailto:soulaimaneabaid655@gmail.com" class="glass-card p-6 rounded-2xl flex flex-col items-center hover:border-sky-500/50 transition">
+                    <div class="w-10 h-10 rounded-full bg-sky-500/10 text-sky-400 flex items-center justify-center mb-3">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 mb-1">Email</span>
+                    <span class="text-sm font-semibold text-white break-all">soulaimaneabaid655@gmail.com</span>
+                </a>
+
+                <a href="tel:0781882946" class="glass-card p-6 rounded-2xl flex flex-col items-center hover:border-sky-500/50 transition">
+                    <div class="w-10 h-10 rounded-full bg-sky-500/10 text-sky-400 flex items-center justify-center mb-3">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 mb-1">Téléphone</span>
+                    <span class="text-sm font-semibold text-white">07 81 88 29 46</span>
+                </a>
+
+                <div class="glass-card p-6 rounded-2xl flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-sky-500/10 text-sky-400 flex items-center justify-center mb-3">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 mb-1">Localisation</span>
+                    <span class="text-sm font-semibold text-white">Gennevilliers / Melun</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800 text-center text-xs text-slate-500">
+        <p>© 2026 Soulaïmane Abaid — Portfolio BTS SIO SISR. Tous droits réservés.</p>
+    </footer>
+
+    <!-- MODAL CV PREVIEW -->
+    <div id="cv-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-3xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+            <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950">
+                <div class="flex items-center gap-2 text-white font-semibold text-sm">
+                    <i data-lucide="file-text" class="w-4 h-4 text-sky-400"></i>
+                    <span>Aperçu du CV — Soulaïmane Abaid</span>
+                </div>
+                <button onclick="closeCvModal()" class="text-slate-400 hover:text-white p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div id="cv-print-area" class="p-6 md:p-8 overflow-y-auto space-y-6 text-slate-200 text-sm bg-slate-900">
+                <!-- Header CV -->
+                <div class="border-b border-slate-800 pb-6 flex flex-col md:flex-row justify-between items-start gap-4">
+                    <div>
+                        <h1 class="text-2xl font-bold text-white">Soulaïmane ABAID</h1>
+                        <p class="text-sky-400 font-medium">19 ans | Étudiant BTS SIO Option SISR</p>
+                        <p class="text-xs text-slate-400 mt-1">8 rue Marcel Royer, 92230 Gennevilliers</p>
+                    </div>
+                    <div class="text-xs text-slate-400 space-y-1">
+                        <p><strong>Tél :</strong> 07 81 88 29 46</p>
+                        <p><strong>Email :</strong> soulaimaneabaid655@gmail.com</p>
+                        <p><strong>Établissement :</strong> Lycée Léonard De Vinci (Melun)</p>
+                    </div>
+                </div>
+
+                <!-- Formations -->
+                <div>
+                    <h2 class="text-sm font-bold uppercase tracking-wider text-sky-400 border-b border-slate-800 pb-1 mb-3">Formations</h2>
+                    <div class="space-y-2">
+                        <div>
+                            <div class="flex justify-between text-white font-medium">
+                                <span>BTS SIO (Services Informatiques aux Organisations)</span>
+                                <span class="text-xs text-slate-400">En cours</span>
+                            </div>
+                            <p class="text-xs text-slate-400">Lycée Léonard De Vinci — Melun</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-white font-medium">
+                                <span>Bac Pro Systèmes Numériques (Option RISC)</span>
+                                <span class="text-xs text-slate-400">2024 - 2025</span>
+                            </div>
+                            <p class="text-xs text-slate-400">Lycée La Tournelle — La Garenne-Colombes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences Techniques -->
+                <div>
+                    <h2 class="text-sm font-bold uppercase tracking-wider text-sky-400 border-b border-slate-800 pb-1 mb-3">Compétences Techniques</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                            <span class="font-bold text-white block mb-1">Systèmes & Virtualisation</span>
+                            <p class="text-slate-400">Windows, Linux (Ubuntu), VirtualBox, Docker, Proxmox</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                            <span class="font-bold text-white block mb-1">Réseaux & Matériel</span>
+                            <p class="text-slate-400">Cisco (VLAN, Inter-VLAN, Trunking, Routage statique), Câblage RJ45, TFTP, SSH, Raspberry Pi, Arduino, ESP32</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                            <span class="font-bold text-white block mb-1">Gestion & Sécurité</span>
+                            <p class="text-slate-400">Active Directory, Linux, Droits NTFS, Zabbix (supervision), GLPI & ITIL, DHCP, DNS</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                            <span class="font-bold text-white block mb-1">Développement</span>
+                            <p class="text-slate-400">HTML/CSS, Bootstrap, SQL, PHP, Scripting d'installation automatisée</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expériences Professionnelles -->
+                <div>
+                    <h2 class="text-sm font-bold uppercase tracking-wider text-sky-400 border-b border-slate-800 pb-1 mb-3">Expériences Professionnelles</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between font-semibold text-white">
+                                <span>Stage BTS - SosTech Paris</span>
+                                <span class="text-xs text-sky-400">2026 (6 sem)</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Gestion du parc informatique avec agent GLPI, réparation matérielle d'ordinateurs, flashage BIOS. Développement d'un programme d'installation silencieuse multi-OS (Linux/Windows) en arrière-plan.</p>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between font-semibold text-white">
+                                <span>Stage Terminale Bac Pro - Linux-Man</span>
+                                <span class="text-xs text-indigo-400">2025 (6 sem) — La Garenne-Colombes</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Installation Linux en VM sécurisée par clés SSH. Développement d'un environnement Vagrant et sécurisation des interfaces réseau d'entreprises (en collaboration avec BNP Paribas).</p>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between font-semibold text-white">
+                                <span>Stage 1ère Bac Pro - Mersen France</span>
+                                <span class="text-xs text-emerald-400">2024 (4 sem) — Gennevilliers</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Câblage et pose de réseaux RJ45. Découverte et configuration d'architectures réseau sous Cisco Packet Tracer et sur matériel réel (switchs/routeurs).</p>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between font-semibold text-white">
+                                <span>Stage 2nde Bac Pro - Mersen France</span>
+                                <span class="text-xs text-slate-400">2023 (2 sem) — Gennevilliers</span>
+                            </div>
+                            <p class="text-xs text-slate-300 mt-1">Schématisation de l'architecture réseau avec MS Visio. Identification et recensement des prises RJ45.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centres d'intérêt -->
+                <div>
+                    <h2 class="text-sm font-bold uppercase tracking-wider text-sky-400 border-b border-slate-800 pb-1 mb-2">Centres d'intérêt</h2>
+                    <p class="text-xs text-slate-300">Sport, Séries, Sorties, Nouvelles technologies & Veille informatique.</p>
+                </div>
+            </div>
+
+            <div class="p-4 border-t border-slate-800 bg-slate-950 flex justify-end gap-3">
+                <button onclick="closeCvModal()" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium">Fermer</button>
+                <button onclick="downloadCv()" class="px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium flex items-center gap-2">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                    <span>Télécharger / Imprimer</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL LETTRE DE MOTIVATION PREVIEW -->
+    <div id="lm-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-3xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+            <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950">
+                <div class="flex items-center gap-2 text-white font-semibold text-sm">
+                    <i data-lucide="mail-open" class="w-4 h-4 text-indigo-400"></i>
+                    <span>Aperçu Lettre de Motivation — Soulaïmane Abaid</span>
+                </div>
+                <button onclick="closeLmModal()" class="text-slate-400 hover:text-white p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div id="lm-print-area" class="p-6 md:p-10 overflow-y-auto space-y-6 text-slate-200 text-sm leading-relaxed bg-slate-900">
+                <!-- Content Letter -->
+                <div class="flex justify-between items-start border-b border-slate-800 pb-4">
+                    <div>
+                        <h2 class="text-lg font-bold text-white">Soulaïmane ABAID</h2>
+                        <p class="text-xs text-slate-400">Gennevilliers / Melun, France</p>
+                        <p class="text-xs text-slate-400">Téléphone : 07 81 88 29 46</p>
+                        <p class="text-xs text-slate-400">Courriel : soulaimaneabaid655@gmail.com</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs text-indigo-400 font-semibold">Candidature de Stage</p>
+                        <p class="text-xs text-slate-400">BTS SIO - Option SISR</p>
+                    </div>
+                </div>
+
+                <div class="py-2 font-semibold text-white">
+                    Objet : Candidature pour un stage de BTS SIO – option SISR
+                </div>
+
+                <div class="space-y-4 text-slate-300 text-justify text-xs sm:text-sm">
+                    <p>Madame, Monsieur,</p>
+
+                    <p>
+                        Actuellement étudiant en 1ère année de BTS Services Informatiques aux Organisations (SIO), option SISR (Solutions d'Infrastructure, Systèmes et Réseaux), au lycée Léonard de Vinci à Melun, je suis activement à la recherche d'un stage au sein de votre service informatique.
+                    </p>
+
+                    <p>
+                        Votre entreprise représente pour moi un environnement idéal pour mettre en pratique mes compétences techniques en administration système, gestion de réseau et virtualisation, tout en développant ma connaissance du monde professionnel.
+                    </p>
+
+                    <p>
+                        Rigoureux et curieux, je souhaite contribuer efficacement aux missions de votre service informatique et mettre à profit les compétences acquises durant ma formation (déploiement de serveurs, configurations CISCO, GLPI, Zabbix, scripting). Mon sens du travail en équipe et mon aisance relationnelle me permettront de m'intégrer rapidement au sein de votre équipe.
+                    </p>
+
+                    <p>
+                        Je serais ravi de pouvoir échanger avec vous lors d'un entretien afin de vous exposer de vive voix ma motivation et mon projet.
+                    </p>
+
+                    <p>
+                        Dans cette attente, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+                    </p>
+                </div>
+
+                <div class="pt-6 flex justify-end">
+                    <div class="text-right">
+                        <p class="font-bold text-white">Soulaïmane ABAID</p>
+                        <p class="text-xs text-slate-400">Étudiant BTS SIO SISR</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 border-t border-slate-800 bg-slate-950 flex justify-end gap-3">
+                <button onclick="closeLmModal()" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium">Fermer</button>
+                <button onclick="downloadLm()" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium flex items-center gap-2">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                    <span>Télécharger / Imprimer</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Lucide Icons init
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = id('mobile-menu-btn');
+        const menu = id('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        function id(name) {
+            return document.getElementById(name);
+        }
+
+        // Modals Logic
+        function openCvModal() {
+            id('cv-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeCvModal() {
+            id('cv-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openLmModal() {
+            id('lm-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLmModal() {
+            id('lm-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Download / Print helper
+        function downloadCv() {
+            const printContent = id('cv-print-area').innerHTML;
+            printDocument("CV - Soulaimane Abaid BTS SIO", printContent);
+        }
+
+        function downloadLm() {
+            const printContent = id('lm-print-area').innerHTML;
+            printDocument("Lettre de Motivation - Soulaimane Abaid BTS SIO", printContent);
+        }
+
+        function printDocument(title, content) {
+            const printWindow = window.open('', '', 'height=800,width=800');
+            printWindow.document.write('<html><head><title>' + title + '</title>');
+            printWindow.document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+            printWindow.document.write('</head><body class="bg-white text-slate-900 p-8">');
+            printWindow.document.write(content);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            setTimeout(() => {
+                printWindow.print();
+            }, 500);
+        }
+    </script>
+</body>
+</html>
