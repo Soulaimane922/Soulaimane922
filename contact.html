@@ -1,69 +1,52 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - Soulaïmane Abaid</title>
-
-  <link href="./assets/img/favicon.png" rel="icon">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="./vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="./vendor/aos/aos.css" rel="stylesheet">
-  <link href="./css/main.css" rel="stylesheet">
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="resume.html">CV</a></li>
-          <li><a href="services.html">Compétences</a></li>
-          <li><a href="portfolio.html">Projets</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+<section id="contact" class="contact section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>N'hésitez pas à me contacter pour toute opportunité ou échange professionnel.</p>
     </div>
-  </header>
 
-  <main class="main">
-    <section id="contact" class="contact section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Contactez-moi</h2>
-          <p>À la recherche d'un stage en informatique du 10 mai au 25 juin 2027[cite: 9], n'hésitez pas à me contacter.</p>
-        </div>
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center p-4 border rounded bg-dark text-light text-center">
-              <i class="bi bi-envelope fs-2 mb-2 text-primary"></i>
-              <h3>Email</h3>
-              <p>soulaimaneabaid655@gmail.com[cite: 9, 10]</p>
+    <div class="row gy-4">
+      <div class="col-lg-5">
+        <div class="info-wrap">
+          <div class="info-item d-flex">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Téléphone</h3>
+              <p>+33 6 XX XX XX XX</p> <!-- Mettez votre numéro ici -->
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center p-4 border rounded bg-dark text-light text-center">
-              <i class="bi bi-phone fs-2 mb-2 text-primary"></i>
-              <h3>Téléphone</h3>
-              <p>07 81 88 29 46[cite: 9, 10]</p>
+
+          <div class="info-item d-flex mt-4">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email</h3>
+              <p>votre.email@exemple.com</p> <!-- Mettez votre mail ici -->
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/main.js"></script>
-</body>
-</html>
+      <div class="col-lg-7">
+        <form action="forms/contact.php" method="post" class="php-email-form">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Votre Nom" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Votre Email" required>
+            </div>
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Sujet" required>
+            </div>
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+            </div>
+            <div class="col-md-12 text-center">
+              <button type="submit">Envoyer le message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
